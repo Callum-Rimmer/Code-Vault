@@ -1,4 +1,4 @@
-**This repository contains instructions on how to run various programs and other useful code.**
+**This repository contains instructions on how to run various programs and other useful code. Each program's section header is linked to its github page.**
 
 ### Hardware information for linux
 `lscpu` - Reports information about cpu and processing units\
