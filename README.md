@@ -87,3 +87,33 @@ Running FastANI comparing multiple queries to multiple references (all vs all):
 fastANI --ql query_list.txt --rl reference_list.txt -o output_filename.txt -t thread_no
 ```
 ...where `query_list.txt` and `reference_list.txt` are text files containing the file paths to the genomes.
+
+### [Tmux](https://github.com/tmux/tmux)
+
+`tmux new -s session_name` - Create a new session
+`tmux attach -t session_name` - Attach session
+`tmux rename-session -t 0 session_name` - Rename session
+`Ctrl-b + d` - Detach from session
+`Ctrl-b + c` - Create new window
+`Ctrl-b + n` - Next window
+`Ctrl-b + p` - Previous window
+
+### [N50](https://github.com/quadram-institute-bioscience/seqfu/wiki/n50)
+```
+n50 *.fa -f custom -t '{path}{tab}N50={N50}{tab}Sum={size}{tab}Contigs={seqs}{new}' > n50_summary.txt
+```
+### [MLST](https://github.com/tseemann/mlst)
+```
+mlst --scheme mlst_scheme genomes > path/to/output/file.txt
+```
+### BLAST
+Making a BLAST database:
+```
+makeblastdb -in fasta_file -dbtype nucl_or_prot -out database_name
+```
+Running command-line BLAST:
+```
+blastn -db database_name -query fasta_file -out results_file.txt -outfmt 6_or"6 extra_columns" -max_target_seqs max_no_of_hits
+```
+
+
