@@ -106,7 +106,7 @@ n50 *.fa -f custom -t '{path}{tab}N50={N50}{tab}Sum={size}{tab}Contigs={seqs}{ne
 ```
 mlst --scheme mlst_scheme genomes > path/to/output/file.txt
 ```
-### BLAST
+### [BLAST](https://www.ncbi.nlm.nih.gov/books/NBK279690/)
 Making a BLAST database:
 ```
 makeblastdb -in fasta_file -dbtype nucl_or_prot -out database_name
