@@ -56,19 +56,19 @@ prokka -outdir output_folder -prefix output_file_prefix -locustag prefix_for_gen
 ### [Conda](https://docs.conda.io/projects/conda/en/latest/commands.html)
 Working with programs:
 
-`conda config --show channels` - See what channels are in use/
-`conda config --add channels channel_name` - Add a channel/
-`python --version` - Check python version/
-`conda search software_name` - Search for software/
+`conda config --show channels` - See what channels are in use\
+`conda config --add channels channel_name` - Add a channel\
+`python --version` - Check python version\
+`conda search software_name` - Search for software\
 `conda install software_name=version` - Install a program (with specified version)
 
 Working with environments:
 
-`conda create -n environment_name python=python.version` - Create environment (with specified python version)/
-`conda activate environment_name` - Activate a conda environment/
-`conda deactivate` - Deactivate an environment/
-`conda list` - Check the list of software installed in the current environment/
-`conda info --envs` - See all environments/
+`conda create -n environment_name python=python.version` - Create environment (with specified python version)\
+`conda activate environment_name` - Activate a conda environment\
+`conda deactivate` - Deactivate an environment\
+`conda list` - Check the list of software installed in the current environment\
+`conda info --envs` - See all environments\
 `conda remove -n environment_name --all` - Completely remove environment
 
 ### [FastANI](https://github.com/ParBLiSS/FastANI)
@@ -90,13 +90,13 @@ fastANI --ql query_list.txt --rl reference_list.txt -o output_filename.txt -t th
 
 ### [Tmux](https://github.com/tmux/tmux)
 
-`tmux new -s session_name` - Create a new session
-`tmux attach -t session_name` - Attach session
-`tmux rename-session -t 0 session_name` - Rename session
-`Ctrl-b + d` - Detach from session
-`Ctrl-b + c` - Create new window
-`Ctrl-b + n` - Next window
-`Ctrl-b + p` - Previous window
+`tmux new -s session_name` - Create a new session\
+`tmux attach -t session_name` - Attach session\
+`tmux rename-session -t 0 session_name` - Rename session\
+`Ctrl-b + d` - Detach from session\
+`Ctrl-b + c` - Create new window\
+`Ctrl-b + n` - Next window\
+`Ctrl-b + p` - Previous window\
 
 ### [N50](https://github.com/quadram-institute-bioscience/seqfu/wiki/n50)
 ```
