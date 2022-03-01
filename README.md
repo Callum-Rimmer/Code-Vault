@@ -1,4 +1,4 @@
-**This repository contains instructions on how to run various programs and other useful code. Each program's section header is linked to its github page.**
+**This repository contains instructions on how to run various programs and other useful code. Each program's section header is linked to its official page.**
 
 ### Hardware information for linux
 `lscpu` - Reports information about cpu and processing units\
@@ -115,5 +115,20 @@ Running command-line BLAST:
 ```
 blastn -db database_name -query fasta_file -out results_file.txt -outfmt 6_or"6 extra_columns" -max_target_seqs max_no_of_hits
 ```
+### [Artificial Fastq Generator](https://github.com/mframpton/ArtificialFastqGenerator)
+```
+Java -jar ArtificialFastqGenerator.jar -R reference.fas -O output/path -S sequence_identifier
+```
+### [PRANK](http://wasabiapp.org/software/prank/)
+```
+prank -d=input_file -o=output_file -F
+```
+### Excel
+Removes everything after the second occurence of a comma:
+```
+=LEFT(SUBSTITUTE(B5,",",CHAR(9),2),FIND(CHAR(9),SUBSTITUTE(B5,",",CHAR(9),2),1)-1)
+```
+In the above code `B5` and `,` can be changed for the removal of everything after any character after a specified occurence.
+
 
 
