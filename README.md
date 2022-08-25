@@ -22,7 +22,8 @@
 `gzip -d filename.gz` - Decompress file\
 `export PATH=$PATH:/path/to/file` - Add this to the .bashrc file to run programs from anywhere\
 `awk -F'[field_separator]' '{print $number_of_field}'` - Pipe text into this to set the field separator (can have multiple separators) to pull out a part of the text\
-`for file in *.aln; do sed -i -r 's#(^.*)_.*$#\1#' $file; done` - Remove everything after last underscore in alignment files
+`for file in *.aln; do sed -i -r 's#(^.*)_.*$#\1#' $file; done` - Remove everything after last underscore in alignment files\
+`for file in *.txt; do sed -i "s/$/\t$file/" $file; done` - Append a new column named after filename
 
 ### [CheckM](https://github.com/Ecogenomics/CheckM)
 ```
