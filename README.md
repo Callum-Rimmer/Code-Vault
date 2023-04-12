@@ -118,6 +118,10 @@ Running command-line BLAST:
 ```
 blastn -db database_name -query fasta_file -out results_file.txt -outfmt 6_or"6 extra_columns" -max_target_seqs max_no_of_hits
 ```
+Example:
+```
+blastn -db ~/bin/blast_databases/database_name -query infile -out results.txt -outfmt "6 qseqid sseqid pident qcovs mismatch gapopen qstart qend sstart send evalue bitscore" -max_target_seqs 1
+```
 ### [Artificial Fastq Generator](https://github.com/mframpton/ArtificialFastqGenerator)
 ```
 Java -jar ArtificialFastqGenerator.jar -R reference.fas -O output/path -S sequence_identifier
