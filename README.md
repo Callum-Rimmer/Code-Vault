@@ -24,7 +24,8 @@
 `awk -F'[field_separator]' '{print $number_of_field}'` - Pipe text into this to set the field separator (can have multiple separators) to pull out a part of the text\
 `for file in *.aln; do sed -i -r 's#(^.*)_.*$#\1#' $file; done` - Remove everything after last underscore in alignment files\
 `for file in *.fas; do sed -i 's/_[^_]*$//' $file; done` - Remove everything after last underscore in fasta header lines\
-`for file in *.txt; do sed -i "s/$/\t$file/" $file; done` - Append a new column named after filename
+`for file in *.txt; do sed -i "s/$/\t$file/" $file; done` - Append a new column named after filename\
+`awk "/^>/ {n++} n>$NSEQS {exit} {print}" file.fasta` - Extract the first n sequences from a multi-fasta file
 
 ### [CheckM](https://github.com/Ecogenomics/CheckM)
 ```
