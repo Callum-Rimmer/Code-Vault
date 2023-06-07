@@ -138,5 +138,25 @@ Removes everything after the second occurence of a comma:
 ```
 In the above code `B5` and `,` can be changed for the removal of everything after any character after a specified occurence.
 
+### Using a HPC
+
+Template script for using `sbatch` on a cluster.
+```
+#!/bin/bash
+
+#SBATCH -p lowpri                                         # For low priority, or leave out
+#SBATCH --job-name=name-of-job                            # Set the name of the job
+#SBATCH -N 1 -c 15                                        # Number of nodes and threads for the job
+#SBATCH --time=15-12:0:0                                  # Maximum time for the job to run
+#SBATCH --output=/users/username/job_logs/name_%j.log     # Creates a log file, or leave out
+
+. /users/username/miniconda3/etc/profile.d/conda.sh       # Use to activate the conda environment
+conda activate raxml-ng
+
+Insert the command to run here
+```
+
+
+
 
 
