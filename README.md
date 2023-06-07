@@ -151,11 +151,10 @@ Template script for using `sbatch` on a cluster.
 #SBATCH --output=/users/username/job_logs/name_%j.log     # Creates a log file, or leave out
 
 . /users/username/miniconda3/etc/profile.d/conda.sh       # Use to activate the conda environment
-conda activate raxml-ng
+conda activate name-of-environment
 
 Insert the command to run here
 ```
-
 
 
 
