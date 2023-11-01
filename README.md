@@ -75,6 +75,14 @@ Working with environments:
 `conda info --envs` - See all environments\
 `conda remove -n environment_name --all` - Completely remove environment
 
+Creating environments using Intel architecture for Apple silicon:
+```
+CONDA_SUBDIR=osx-64 conda create -n rosetta python   # create a new environment called rosetta with intel packages.
+conda activate rosetta
+python -c "import platform;print(platform.machine())"
+conda config --env --set subdir osx-64  # make sure that conda commands in this environment use intel packages
+```
+
 ### [FastANI](https://github.com/ParBLiSS/FastANI)
 Running FastANI comparing one genome to another genome:
 ```
